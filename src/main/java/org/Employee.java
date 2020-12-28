@@ -3,17 +3,17 @@ package org;
 public class Employee {
     private String id;
     private String name;
-    private String Department;
-    private String Designation;
+    private String department;
+    private String designation;
 
     public Employee(){
-        super();
+
     }
     public Employee(String id, String name, String department, String designation) {
         this.id = id;
         this.name = name;
-        Department = department;
-        Designation = designation;
+        this.department = department;
+        this.designation = designation;
     }
 
     public String getId() {
@@ -33,18 +33,18 @@ public class Employee {
     }
 
     public String getDepartment() {
-        return Department;
+        return department;
     }
 
     public void setDepartment(String department) {
-        Department = department;
+        this.department = department;
     }
 
     public String getDesignation() {
-        return Designation;
+        return designation;
     }
 
     public void setDesignation(String designation) {
-        Designation = designation;
+        this.designation = designation;
     }
 }
