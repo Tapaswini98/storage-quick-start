@@ -6,8 +6,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.util.HashMap;
 
-public class EmployeeImplimentation implements EmployeeInterface {
+public class EmployeeImplementation implements EmployeeInterface {
     ObjectMapper objectMapper = new ObjectMapper();
+    Employee employee = new Employee();
     HashMap<String, Object> hash = new HashMap<String, Object>();
     @Override
     public void create(Employee employee) {
@@ -20,7 +21,7 @@ public class EmployeeImplimentation implements EmployeeInterface {
     }
 
     @Override
-    public HashMap<String ,Object> read(Employee employee) {
+    public Employee  read(String id) {
         try {
             hash = objectMapper.readValue(new File("target/employee.json"), new TypeReference<HashMap<String, Object>>() {
             });
@@ -30,12 +31,12 @@ public class EmployeeImplimentation implements EmployeeInterface {
         catch(Exception e){
             e.printStackTrace();
         }
-        return hash;
+        return employee;
     }
 
     @Override
-    public void delete(Employee employee) {
-
+    public boolean delete(String id) {
+       return false;
     }
 
 }

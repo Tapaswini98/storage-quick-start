@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 
-public class EmployeeMain extends EmployeeImplimentation{
+public class EmployeeMain extends EmployeeImplementation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //HashMap<String, Object> hashmap = new HashMap<String, Object>();
@@ -32,9 +32,10 @@ public class EmployeeMain extends EmployeeImplimentation{
         catch (Exception e) {
             e.printStackTrace();
         }
+        String id = employee.getId();
         EmployeeMain e = new EmployeeMain();
         e.create(employee);
-        e.read(employee);
-        e.delete(employee);
+        e.read(id);
+        e.delete(id);
     }
 }
