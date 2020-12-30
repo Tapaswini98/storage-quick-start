@@ -1,4 +1,4 @@
-package org;
+package emp;
 
 import java.util.Scanner;
 

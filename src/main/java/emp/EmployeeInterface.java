@@ -1,5 +1,7 @@
-package org;
+package emp;
 
+
+import emp.Employee;
 
 public interface EmployeeInterface {
     public abstract void create(Employee employee);
