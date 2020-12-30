@@ -29,11 +29,11 @@ public class EmployeeMain extends EmployeeImplementation {
                     e.create(employee);
                     break;
                   case 2:
-                    String id = employee.getId();
-                    e.read(id);
+                    e.read(employee);
                     break;
                   case 3:
-                    String iid = employee.getId();
+                    System.out.println("Enter the ID of the value You want to delete :");
+                    String iid = scanner.next();
                     e.delete(iid);
                     break;
                   case 4:

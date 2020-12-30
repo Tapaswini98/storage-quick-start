@@ -23,20 +23,22 @@ public class EmployeeImplementation implements EmployeeInterface {
         }
     }
     @Override
-    public Employee read(String id) {
-        if(hash.containsKey(id)){
+    public void read(Employee employee) {
             try {
                 hash = objectMapper.readValue(new File("target/employee.json"), new TypeReference<HashMap<String, Object>>() {
                 });
-                System.out.println(hash);
-
+                if(hash.isEmpty())
+                {
+                    System.out.println("There is no data in the Storage System.");
+                }
+                else
+                    {
+                      System.out.println(hash);
+                   }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }else {
-            System.out.println("The Key is not present in storage system");
-        }
-        return new Employee();
+        //}
     }
 
     @Override
