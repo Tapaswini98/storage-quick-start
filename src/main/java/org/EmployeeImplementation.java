@@ -15,8 +15,13 @@ public class EmployeeImplementation implements EmployeeInterface {
         try {
             hash = objectMapper.readValue(new File("target/employee.json"), new TypeReference<HashMap<String, Object>>() {
             });
-            hash.put(employee.getId(),employee);
-            objectMapper.writeValue(new File("target/employee.json"), hash);
+            if(hash.containsKey(employee.getId())){
+                System.out.println("This Key is already present.Try another key.");
+            }
+            else {
+                hash.put(employee.getId(), employee);
+                objectMapper.writeValue(new File("target/employee.json"), hash);
+            }
         }
         catch(Exception e){
             e.printStackTrace();
