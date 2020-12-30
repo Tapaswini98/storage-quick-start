@@ -37,15 +37,14 @@ public class EmployeeMain extends EmployeeImplementation {
                     e.delete(iid);
                     break;
                   case 4:
-                    System.out.println("Quitting the program...");
+                    System.out.print("Quitting....");
+                    System.out.println("Thank You for visiting the program");
+                    System.exit(0);
                     break;
                   default:
                     System.out.println("Enter a choice from above options.");
                     break;
               }
-
-            //System.out.println("Thanks for visiting this program...");
-
 
         }
 
