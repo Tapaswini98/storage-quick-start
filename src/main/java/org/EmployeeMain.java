@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class EmployeeMain extends EmployeeImplementation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Employee employee = new Employee();
         EmployeeMain e = new EmployeeMain();
+
         while(true){
             System.out.println("Employee Storage System");
             System.out.println("========================");
@@ -19,7 +19,7 @@ public class EmployeeMain extends EmployeeImplementation {
 
             System.out.println("Enter your choice");
             int choice = scanner.nextInt();
-
+             Employee employee = new Employee();
                switch(choice) {
                   case 1:
                     employee.setId(scanner.next());
